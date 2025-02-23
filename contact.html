@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="contact.css">
+  <title>HIGH WISE INNOVATION</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand logo animate__animated animate__bounce" href="index.html">HIGH WISE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="a propos.html">À Propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 data-aos="fade-up">HIGH WISE INNOVATION</h1>
+      <p data-aos="fade-up" data-aos-delay="200">Orienter, former et accompagner la jeunesse vers un avenir meilleur.</p>
+      <a href="contact.html" class="btn btn-main btn-lg" data-aos="fade-up" data-aos-delay="400">Commencer</a>
+    </div>
+  </section>
+
+  <!-- Contact Section with Form and Video Background -->
+  <section id="contact" class="py-5 bg-light text-center position-relative" data-aos="fade-up">
+    <div class="video-background">
+      <video autoplay muted loop>
+        <source src="istockphoto-2166618381-640_adpp_is.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+    </div>
+    <div class="container form-container">
+      <h2>Contactez-nous</h2>
+      <p>Remplissez le formulaire ci-dessous pour nous envoyer votre demande.</p>
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-6" data-aos="fade-right">
+          <label for="nom" class="form-label">Nom</label>
+          <input type="text" class="form-control" id="nom" placeholder="Entrez votre nom" required>
+          <div class="invalid-feedback">Veuillez entrer votre nom.</div>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <label for="prenom" class="form-label">Prénom</label>
+          <input type="text" class="form-control" id="prenom" placeholder="Entrez votre prénom" required>
+          <div class="invalid-feedback">Veuillez entrer votre prénom.</div>
+        </div>
+        <div class="col-md-6" data-aos="fade-right">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Entrez votre email" required>
+          <div class="invalid-feedback">Veuillez entrer une adresse email valide.</div>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <label for="telephone" class="form-label">Téléphone</label>
+          <input type="tel" class="form-control" id="telephone" placeholder="Entrez votre numéro" required>
+          <div class="invalid-feedback">Veuillez entrer un numéro valide.</div>
+        </div>
+        <div class="col-12" data-aos="fade-up">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="4" placeholder="Votre message..." required></textarea>
+          <div class="invalid-feedback">Veuillez entrer un message.</div>
+        </div>
+        <div class="col-12 text-center mt-3" data-aos="zoom-in">
+          <button class="btn btn-primary btn-lg" type="submit">Envoyer</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS and AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+    (function () {
+      'use strict';
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.from(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+  </script>
+</body>
+</html>
